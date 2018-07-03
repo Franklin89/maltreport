@@ -19,19 +19,11 @@ namespace MaltReport.HelloWorld
                 new Employee{ Name = "Andy Bernard", JobTitle = "Salesman" },
             };
 
-            var transactions = new Transaction[]
-            {
-                new Transaction { Buy = 10.45, Sell = 12.35 },
-                new Transaction { Buy = 1.4, Sell = 9.00 },
-                new Transaction { Buy = 0.12, Sell = 19.5 }
-            };
-
             var image = new ImageBlob("jpeg", File.ReadAllBytes("Image.jpeg"));
 
             var data = new Dictionary<string, object>()
             {
                 { "employees", employees },
-                { "transactions", transactions },
                 { "image", image },
             };
 
