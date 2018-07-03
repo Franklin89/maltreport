@@ -15,8 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="EmployeesTemplate.odt" />
-    <Content Include="Image.jpeg" />
+    <Content Include="EmployeesTemplate.odt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
