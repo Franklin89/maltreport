@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MaltReport.HelloWorld
 {
 
@@ -9,6 +5,7 @@ namespace MaltReport.HelloWorld
     {
         public string Name { get; set; }
         public string JobTitle { get; set; }
+        public double Salary { get; set; }
     }
 
 }
