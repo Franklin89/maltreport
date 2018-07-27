@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Fluid;
 using NUnit.Framework;
 
@@ -67,6 +65,31 @@ namespace Sandwych.Reporting.Tests
 
         }
 
+        [Test]
+        public void FluidFilterToRoundNumber()
+        {
+            dynamic model = new
+            {
+                Str1 = "Fluid",
+                Str2 = "Template",
+                Numbers = new Item[]
+               {
+                    new Item { Number = 1 },
+                    new Item { Number = 2 }
+               },
+                Double = 145.256
+            };
 
+            var source = "Hello {{p.Str1}} {{ p.Str2 }} {{ p.Double | round:2 }} [{% for i in p.Numbers %}{{i.Number}}{% endfor %}]";
+            Assert.True(FluidTemplate.TryParse(source, out var template));
+            var context = new Fluid.TemplateContext();
+            context.SetValue("p", model);
+            context.MemberAccessStrategy.Register(model.GetType() as Type);
+            context.MemberAccessStrategy.Register(typeof(Item));
+            var result = template.Render(context);
+
+            Assert.AreEqual($"Hello {model.Str1} {model.Str2} {Math.Round(model.Double, 2)} [{model.Numbers[0].Number}{model.Numbers[1].Number}]", result);
+
+        }
     }
 }
