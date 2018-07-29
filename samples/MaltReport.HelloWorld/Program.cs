@@ -12,11 +12,11 @@ namespace MaltReport.HelloWorld
         {
             var employees = new Employee[]
             {
-                new Employee{ Name = "Micheal Scott", JobTitle = "Branch Manager", Salary = 1000.82323 },
+                new Employee{ Name = "Micheal Scott", JobTitle = "Branch Manager", Salary = 500.124 },
                 new Employee{ Name = "Pam Beesly", JobTitle = "Office Administrator", Salary = 1000.82323 },
-                new Employee{ Name = "Jim Halpert", JobTitle = "Salesman", Salary = 1000.82323 },
-                new Employee{ Name = "Dwight Schrute", JobTitle = "Salesman", Salary = 1000.82323 },
-                new Employee{ Name = "Andy Bernard", JobTitle = "Salesman", Salary = 1000.82323 },
+                new Employee{ Name = "Jim Halpert", JobTitle = "Salesman", Salary = 1800.1999 },
+                new Employee{ Name = "Dwight Schrute", JobTitle = "Salesman", Salary = 1390.039 },
+                new Employee{ Name = "Andy Bernard", JobTitle = "Salesman", Salary = 100.1234 },
             };
 
             var image = new ImageBlob("jpeg", File.ReadAllBytes("Image.jpeg"));
@@ -24,7 +24,7 @@ namespace MaltReport.HelloWorld
             var data = new Dictionary<string, object>()
             {
                 { "employees", employees },
-                { "image", image },
+                { "image", image }
             };
 
             var context = new TemplateContext(data);

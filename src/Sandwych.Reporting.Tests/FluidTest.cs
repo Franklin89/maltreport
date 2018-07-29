@@ -91,5 +91,17 @@ namespace Sandwych.Reporting.Tests
             Assert.AreEqual($"Hello {model.Str1} {model.Str2} {Math.Round(model.Double, 2)} [{model.Numbers[0].Number}{model.Numbers[1].Number}]", result);
 
         }
+
+        [Test]
+        public void FluidFilterDateTest()
+        {
+            var source = "{{ \"now\" | date: \"%v\" }}";
+            Assert.True(FluidTemplate.TryParse(source, out var template));
+            var context = new Fluid.TemplateContext();
+            var result = template.Render(context);
+
+            Assert.Greater(result.Length, 3);
+
+        }
     }
 }
