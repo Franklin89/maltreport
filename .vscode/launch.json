@@ -1,16 +1,28 @@
 {
+<<<<<<< HEAD
     // Use IntelliSense to find out which attributes exist for C# debugging
     // Use hover for the description of the existing attributes
     // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
     "version": "0.2.0",
     "configurations": [
+=======
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+>>>>>>> 5be3b17df902eacbe9c36be4a947d9f2508baf35
         {
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
+<<<<<<< HEAD
             "program": "${workspaceFolder}/samples/MaltReport.HelloWorld/bin/Debug/netcoreapp2.1/MaltReport.HelloWorld.dll",
+=======
+            "program": "${workspaceFolder}/samples/MaltReport.HelloWorld/bin/Debug/netcoreapp2.0/MaltReport.HelloWorld.dll",
+>>>>>>> 5be3b17df902eacbe9c36be4a947d9f2508baf35
             "args": [],
             "cwd": "${workspaceFolder}/samples/MaltReport.HelloWorld",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
@@ -23,6 +35,11 @@
             "type": "coreclr",
             "request": "attach",
             "processId": "${command:pickProcess}"
+<<<<<<< HEAD
         },
     ]
+=======
+        }
+    ,]
+>>>>>>> 5be3b17df902eacbe9c36be4a947d9f2508baf35
 }

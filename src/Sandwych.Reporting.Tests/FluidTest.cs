@@ -101,7 +101,6 @@ namespace Sandwych.Reporting.Tests
             var result = template.Render(context);
 
             Assert.Greater(result.Length, 3);
-
         }
     }
 }
